@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    /* Основные настройки компиляции */
+    "target": "ES2022",                 // Современный синтаксис ECMAScript
+    "module": "ESNext",                 // Используем систему ESModules
+    "moduleResolution": "node",         // Для работы с внешними модулями через Node.js
+    "lib": ["ES2022"],                  // Стандартная библиотека ES2022
+    /* Директории */
+    "rootDir": "./src",                 // Исходные файлы TypeScript
+    "outDir": "./dist",                 // Скомпилированные JavaScript-файлы
+
+    /* Строгая типизация */
+    "strict": true,                     // Включает строгую типизацию
+    "noImplicitAny": true,              // Запрещает неявный тип any
+    "strictNullChecks": true,           // Требует проверок на null/undefined
+    "strictBindCallApply": true,        // Проверка методов bind, call, apply
+
+    /* Совместимость с ESM и JSON */
+    "esModuleInterop": true,            // Дает возможность использовать `import express from 'express'` в CommonJS
+    "resolveJsonModule": true,          // Позволяет импортировать JSON-файлы
+
+    /* Автоматическое добавления расширений */
+    "baseUrl": ".",
+    "paths": {
+      "*": ["*", "*.js"]
+    },
+
+    /* Прочее */
+    "sourceMap": true,                  // Генерация карты исходника для отладки
+    "forceConsistentCasingInFileNames": true, // Чувствительность к регистру
+    "skipLibCheck": true                // Пропускаем проверку типов в библиотеках
+  },
+
+  "include": ["src"],                   // Какие папки компилировать (исходный код)
+  "exclude": ["node_modules", "dist"]   // Какие папки игнорировать
+}
